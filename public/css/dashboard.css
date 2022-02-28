@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ #text_logo{
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 20px;
+}
+
+li,a {
+    
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav_bar li a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    background-color: #dc143c;
+}
+
+.nav_bar li{
+    list-style: none;
+    display: inline-block;
+    padding: 16px 15px 0 15px;
+}
+
+.title_dashboard h1{
+    text-align: center;
+    margin: 70px 0;
+    color: #dc143c;
+}
+
+.ho_so_dang_thu_ly .title_dang_thu_ly{
+    background-color: #dc143c;
+    margin: 10px 0 10px 0;
+    height: 30px;
+}
+
+.ho_so_dang_thu_ly .title_dang_thu_ly p{
+    padding-top: 4px;
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: 500;
+    color: white;
+   
+}
+
+.btn.btn-danger:hover {
+    background-color: #186bcc;
+}
+
+.page-item.active .page-link{
+    background-color: #dc143c !important;
+}
+
+.page-item.active .page-link:hover{
+    background-color: #186bcc !important;
+}
+
+
+
+
