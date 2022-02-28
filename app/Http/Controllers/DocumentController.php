@@ -75,8 +75,8 @@ class DocumentController extends Controller
             'name' => $request->get('Hoten'),
             'sheet'=> $request->get('SoTo'),
             'pol'=> $request->get('sothua'),
-            'district'=> $request->get('phuong'),
-            'ward'=> $request->get('quan'),
+            'district'=> $request->get('quan'),
+            'ward'=> $request->get('phuong'),
           ]);
         //   dd($share);
         $this->UpdateStatus($share,"1");         
