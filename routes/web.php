@@ -19,6 +19,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/document/searchView', [DocumentController::class,'searchView']);
+Route::get('/document/search', [DocumentController::class,'search'])->name('document.search');
+Route::get('/document/{document}/show', [DocumentController::class,'show']);
+Route::get('/document/nophoso', [DocumentController::class,'create']);
+Route::post('/document/store', [DocumentController::class,'store'])->name('document.store');;
+
 Route::group(['middleware' => ['auth']], function () {
     
     Route::resource('documents', DocumentController::class);

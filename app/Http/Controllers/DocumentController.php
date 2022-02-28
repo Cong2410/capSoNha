@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Document;
+use App\Models\Status;
 use Illuminate\Http\Request;
 use App\Traits\UpdateStatusTrait;
 
@@ -27,9 +28,33 @@ class DocumentController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.layout');
+    }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function searchView()
+    {
+        return view('layouts.layout1');
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request)
+    {
+        //
+        $request->validate([
+            'mahoso'=>'required',
+          ]);
+          $path = '/document' . '/' . $request->input('mahoso').'/show';
+          return redirect($path);
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -39,6 +64,25 @@ class DocumentController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'Hoten'=>'required',
+            'SoTo'=> 'required|integer',
+            'sothua' => 'required|integer',
+            'phuong' => 'required',
+            'quan' => 'required',
+          ]);
+          $share = new document([
+            'name' => $request->get('Hoten'),
+            'sheet'=> $request->get('SoTo'),
+            'pol'=> $request->get('sothua'),
+            'district'=> $request->get('phuong'),
+            'ward'=> $request->get('quan'),
+          ]);
+        //   dd($share);
+        $this->UpdateStatus($share,"1");         
+        //   return redirect('/sharesnophoso')->with('success', 'Stock has been added');
+        $mahoso=$share->id;
+        return view('layouts.layoutt',compact('mahoso'));
     }
 
     /**
@@ -50,6 +94,14 @@ class DocumentController extends Controller
     public function show(Document $document)
     {
         //
+        $statusID  = $document->documentStatus;
+        $Name= $document->name;
+        $documentID = $document->id;
+        $stt = Status::where('id', $statusID)->firstOrFail();
+       
+        $sttName = $stt->name;
+        // dd($sttName,$documentID);
+        return view('layouts.layout1', compact('sttName','Name','documentID'));
     }
 
     /**
