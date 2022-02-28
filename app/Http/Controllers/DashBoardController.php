@@ -19,7 +19,7 @@ class DashBoardController extends Controller
         //
         if(auth()->user()->hasRole('expert')){
             
-            $HoSos = document::where('documentStatus', '1');
+            $HoSos = document::where('documentStatus', '1')->get();
         }
         if(auth()->user()->hasRole('head-of-department')){
             $HoSos = document::where('documentStatus', '2')->get();
