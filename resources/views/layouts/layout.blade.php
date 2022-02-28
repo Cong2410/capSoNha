@@ -91,8 +91,7 @@
 <br><br>
 {{csrf_field()}}
   <button type="submit">NỘP HỒ SƠ</button>
-<label style="text-align: center; font-size:20px; color:red">Mã hồ sơ của bạn là: </label>
-<input   type="text" name="mahoso"   placeholder=" Mã hồ sơ...">
+
 </form>
 </body>
 </html>

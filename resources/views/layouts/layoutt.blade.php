@@ -13,7 +13,7 @@
 </head>
 <body>
         <p id="hoso" class="animate__animated animate__tada animate__infinite ">NỘP HỒ SƠ </p><br>
-        <div id="nhapthongtin">Nhập Thông Tin</div>
+        <div id="nhapthongtin">Đăng Kí Thông Tin Nộp Hồ Sơ Thành Công</div>
         {{-- <form method="get" action="{{url('/documents')}}"> --}}
         <br>
   
