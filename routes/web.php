@@ -31,4 +31,5 @@ Route::group(['middleware' => ['auth']], function () {
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/DashBoard' , 'App\Http\Controllers\DashBoardController@index');
+Route::get('/document/dashboard' , 'App\Http\Controllers\DashBoardController@index');
+Route::get('/map', [App\Http\Controllers\DocumentController::class, 'index'])->name('map');

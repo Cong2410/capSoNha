@@ -4053,7 +4053,7 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 .navbar-nav {
-  display: flex;
+  display: inline;
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
@@ -4513,6 +4513,7 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-top: 125px;
 }
 .card > hr {
   margin-right: 0;

@@ -12,24 +12,25 @@
 </head>
 <body>
     <header>
-       <a id="text_logo"> CẤP SỐ NHÀ TP.HCM </a>
-       <nav> 
-           <ul class="nav_bar">
-               <li><a  href="">Bản đồ quy hoạch</a> </li>
-               <li><a  href="">Tra cứu hồ sơ</a></li>
-               <li><a  href="">Quản lý hồ sơ</a></li>
-
-           </ul>
-       </nav>
+        <a id="text_logo" href="{{ url('/') }}"> CẤP SỐ NHÀ TP.HCM </a>
+        <nav> 
+            <ul class="nav_bar">
+                <li><a href="{{ url('/document/nophoso') }}">Nộp hồ sơ</a></li>
+                    <li><a  href="{{ url('/map') }}">Bản đồ quy hoạch</a> </li>
+                    <li><a  href="{{ url('/document/searchView') }}">Tra cứu hồ sơ</a></li>
+                    <li><a  href="">Quản lý hồ sơ</a></li>
+ 
+            </ul>
+        </nav>
     </header>
     <div class="title_dashboard">
-        <h1>Danh sách hồ sơ</h1>
+        <h1>Quản lý hồ sơ</h1>
     </div>
     <div class="ho_so_dang_thu_ly">
         <div class="title_dang_thu_ly">
             <p>Hồ sơ đang thụ lý</p>
         </div>
-        </div>
+    </div>
     
 
     <table id="example" class="table table-striped table-bordered" style="width:100%">
